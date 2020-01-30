@@ -1,3 +1,21 @@
 # About this project
-  - The script 0-current_working_directory prints the current working directory
-  - The script 1-listit prints a list of the directory contents 
+  - The script 0-current_working_directory execute a command to displays current directory
+  - The script 1-listit execute a command to display the contents list of the current directory
+  - The script 2-bring_me_home execute HOME command and go to the HOME directory
+  - The script 3-listfiles execute a command to display the current directory in a long format
+  - The script 4-listmorefiles execute a command to display all current directory files including hidden files
+  - The script 5-listfilesdigitonly execute a command to display all current directory files in a long format whit user and group IDs displayed numerically
+  - The script 6-firstdirectory execute a command to creates holberton directory in /tmp/
+  - The script 7-movethatfile execute a command to move a file from the /tmp/ directory to the /tmp/holberton directory
+  - The script 8-firstdelete executes a command to delete a file in the /tmp/holberton directory
+  - The script 9-firstdirdeletion executes a command to delete holberton directory that is in the /tpm directory
+  - The script 10-back executes a command to changes the working directory to the previous one
+  - The script 11-list executes a command to list all files in the current directory, all files in the parent directory and all files in the /boot directory
+  - The script 12-file_type executes a command to print the type of the file named iamafile that is inside the /tmp directory
+  - The script 13-symbolic_link executes a command to create a symbolic link to /bin/ls directory named __ls__
+  - The script 14-copy_html executes a command to copy all the HTML files from the current directory to the parent directory
+  - The script 15-lest_move executes a command to move all files beginning whit an uppercase letter to the /tmp/u directory
+  - The script 16-clean_emacs executes a command to delete all files in the current directory that end with the character ~
+  - The script 17-tree executes a command to create welcome/ directory welcome/to directory and welcome/to/holberton directory at the same time
+  - The script 18-commas executes a command to list all the files and directories of the currenct directory, separated by commas
+  - The file holberton.mgc is a magic file that needs be readed by the command file
