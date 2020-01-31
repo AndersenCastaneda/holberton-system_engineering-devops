@@ -1,1 +1,21 @@
 # About this project
+
+  - The script 0-iam_betty execute a command to changes the user to betty
+  - The script 1-who_am_i execute a command to print the userid or the current user
+  - The script 2-groups execute a command to print all the groups the current user is part of
+  - The script 3-new_owner execute a command to change the owner of the fille hello to the user betty
+  - The script 4-empty execute a command to create an empty file
+  - The script 5-execute a command to add execute permission to the owner of the file hello
+  - The script 6-multiple_permission execute a command to add execute permission to the owner and the group owner, and read permission to the other users to the file hello
+  - The script 7-everybody execute a command to add execution permission to the owner, the group owner and the other users to the file hello
+  - The script 8-James_Bond execute a command to set the permissions file, no permission to the owner, no permission to the group and all permission to other users
+  - The script 9-John_Doe execute a command to set the mode of the file hello
+  - The script 10-mirror_permissions execute a command to set the mode of the file hello the same as olleh's mode
+  - The script 11-directories_permissions executes a command to add execute permission to all subdirectories of the current directory for the owner, the group owner and all other users whitout affect regular files
+  - The script 12-directory_permission executes a command to create a directory caller dor_holberton whit permissios 751 in the working directory
+  - The script 13-change_group executes a command to change the owner group to holberton for th efile hello
+  - The script 14-change_owner_and_group executes a command to change the owner to betty ant the group woner to holberton for all the files and directories in the working directory
+  - The script 15-symbolic_link_permissions executes a command to change the owner and the group owner of the file _hello to betty and holberton respectively whit a symbolic link
+  - The script 16-if_only executes a command to change the owner of the file hello to betty only if it is owner by the user guillaume
+  - The script 100-Star_Wars executes a command to play StarWars IV episode in the terminal
+  - The script 101-man_holberton is a man page for holberton
