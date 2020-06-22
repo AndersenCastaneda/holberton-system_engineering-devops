@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script kills the process 7-highlander using -9(Kill Signal)
+kill -SIGKILL "$(pgrep -f 7-highlander)"
