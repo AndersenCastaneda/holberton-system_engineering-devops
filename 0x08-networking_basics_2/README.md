@@ -31,7 +31,8 @@ Answers [2-change_your_home_IP](2-change_your_home_IP)
 
 ##
 ### Write a Bash script that displays:
-- all active IPv4 IPs on the machine it’s executed on
+- all active IPv4 IPs on the machine it’s executed on.
+
 Answers [3-show_attached_IPs](3-show_attached_IPs)
 
 ##
