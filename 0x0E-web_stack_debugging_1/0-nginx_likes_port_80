@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Configures 80 por on server
-sudo sed -i "s/listen 8080 default_server;/listen 80 default_server;/g" /etc/nginx/sites-available/default
-sudo sed -i "s/listen \[::\]:8080 default_server ipv6only=on;/listen [::]:80 default_server ipv6only=on;/g" /etc/nginx/sites-available/default
-
+sudo apt-get remove -y --purge nginx nginx-common
+sudo apt-get -y update
+sudo apt-get install -y nginx
 sudo service nginx restart
