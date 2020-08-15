@@ -31,6 +31,11 @@ file_line { 'custom_header':
   require => Package['nginx'],
 }
 
+file { 'index':
+  content => 'Holberton School',
+  require => Package['nginx'],
+}
+
 service { 'nginx':
   ensure  => runing;
   require => Package['nginx'],
