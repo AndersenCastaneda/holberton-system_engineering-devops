@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # Configures port 80 on server
-sudo apt-get remove -y --purge nginx nginx-common
-sudo apt-get -y update
-sudo apt-get install -y nginx
 sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
 sudo service nginx restart
