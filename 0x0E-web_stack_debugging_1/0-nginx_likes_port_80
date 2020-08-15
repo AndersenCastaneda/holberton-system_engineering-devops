@@ -5,3 +5,4 @@ sudo apt-get -y update
 sudo apt-get install -y nginx
 sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
 sudo service nginx restart
+sudo pkill -o nginx
