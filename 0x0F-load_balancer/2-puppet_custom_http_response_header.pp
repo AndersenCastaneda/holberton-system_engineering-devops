@@ -8,14 +8,14 @@ package { 'nginx':
   require => Exec['apt-get-update'],
 }
 
-file_line {
+file_line { 'custom_header':
   path    => '/etc/nginx/sites-available/default',
   after   => 'server_name _;',
   line    => 'add_header X-Served-By $hostname;'
   require => Package['nginx'],
 }
 
-service {
+service { 'nginx':
   ensure  => runing;
   require => Package['nginx'],
 }
