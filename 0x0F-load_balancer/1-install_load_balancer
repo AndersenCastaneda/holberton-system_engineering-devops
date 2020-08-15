@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
-sudo apt-get update -y
-sudo apt-get install -y haproxy=2.0.\*
-echo -e "\nlisten www\n\tbind *:80\n\tmode http\n\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
-echo -e "\tserver gc-1504-web-01 35.231.98.181\n\tserver gc-1504-web-02 35.237.106.108" >> /etc/haproxy/haproxy.cfg
+sudo apt-get -y update
+sudo apt-get install -y haproxy=1.6.\*
+
+frontend_cfg="frontend http\n\tbind *:80\n\tmode http\n\tdefault_backend web_servers"
+backend_cfg="backend web_servers\n\tbalance roundrobin\n\tmode http\n\tserver web-01 35.231.98.181:80\n\tserver web-02 35.237.106.108:80"
+
+sudo sed -i "20i \\\n$frontend_cfg\n\n$backend_cfg\n" /etc/haproxy/haproxy.cfg
+
 sudo service haproxy restart
