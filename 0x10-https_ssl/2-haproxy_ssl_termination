@@ -18,24 +18,20 @@ global
         ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS
         ssl-default-bind-options no-sslv3
 
-frontend http
+frontend my_frontend
         bind *:80
-        mode http
-        bind 0.0.0.0:443 ssl crt-list /etc/haproxy/certs/list.txt
+        bind *:443 ssl crt-list /etc/haproxy/certs/list.txt
         reqadd X-Forwarded-Proto:\ https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-        use_backend letsencrypt-backend if letsencrypt-acl
+        mode http
         default_backend web_servers
 
 backend web_servers
         balance roundrobin
         mode http
         option forwardfor
-        server web-01 35.231.98.181:80
-        server web-02 35.237.106.108:80
-
-backend letsencrypt-backend
-   server letsencrypt 127.0.0.1:54321
+        server web-01 35.231.98.181:80 check
+        server web-02 35.237.106.108:80 check
 
 defaults
         log     global
