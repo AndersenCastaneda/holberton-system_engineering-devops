@@ -11,7 +11,7 @@ if __name__ == "__main__":
         t = 'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(uid)
         name = requests.get(u).json().get('name')
         rq_todo = requests.get(t).json()
-        tasks = [i['title'] for i in rq_todo if i.get('completed') is True]
+        tasks = [i.get('title') for i in rq_todo if i.get('completed') is True]
         print('Employee {} is done with tasks({}/{}):'
               .format(name, len(tasks), len(rq_todo)))
         print('\n'.join('\t{}'.format(i) for i in tasks))
