@@ -14,5 +14,6 @@ if __name__ == "__main__":
         rq_todo = requests.get(t).json()
         with open('{}.csv'.format(uid), 'w+') as file:
             for line in rq_todo:
-                info = '"{}","{}","{}","{}"\n'.format(uid, name, line.get('completed'), line.get('title'))
+                info = '"{}","{}","{}","{}"\n'.format(
+                    uid, name, line.get('completed'), line.get('title'))
                 file.write(info)
