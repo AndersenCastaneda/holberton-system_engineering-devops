@@ -3,10 +3,10 @@
 
 if __name__ == "__main__":
     import requests
-    from sys import argv
+    import sys
 
-    if len(argv) == 2:
-        uid = argv[1]
+    if len(sys.argv) == 2:
+        uid = sys.argv[1]
         u = 'https://jsonplaceholder.typicode.com/users/{}'.format(uid)
         t = 'https://jsonplaceholder.typicode.com/todos/?userId={}'.format(uid)
         name = requests.get(u).json()['name']
