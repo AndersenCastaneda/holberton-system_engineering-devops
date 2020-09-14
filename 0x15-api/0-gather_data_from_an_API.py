@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Returns information about his/her TODO list progress
+"""Returns information about his/her TODO list progress"""
 
 if __name__ == "__main__":
     import requests
@@ -14,4 +14,4 @@ if __name__ == "__main__":
         tasks = [i.get('title') for i in rq_todo if i.get('completed') is True]
         print('Employee {} is done with tasks({}/{}):'
               .format(name, len(tasks), len(rq_todo)))
-        print('\n'.join('     {}'.format(i) for i in tasks))
+        print('\n'.join('\t {}'.format(i) for i in tasks))
