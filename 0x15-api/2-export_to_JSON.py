@@ -19,4 +19,4 @@ if __name__ == "__main__":
                         "completed": line.get("completed"), "username": name}
                 tasks.append(task)
             info = {uid: tasks}
-            file.write(str(info))
+            file.write(json.dumps(info))
