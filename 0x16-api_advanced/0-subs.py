@@ -7,7 +7,6 @@
 def number_of_subscribers(subreddit):
     """Queries the Reddit API and returns the number of subscribers"""
     import requests
-    import json
 
     if subreddit is None or type(subreddit) != str:
         return 0
