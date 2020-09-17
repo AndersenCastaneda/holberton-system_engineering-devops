@@ -52,4 +52,4 @@ What did I learn from this project:
 
 * [GitHub - AndersenCastaneda](https://github.com/AndersenCastaneda)
 
-* [LinkedIn - AndersenCastaneda](www.linkedin.com/in/AndersenCastaneda)
+* [LinkedIn - AndersenCastaneda](https://www.linkedin.com/in/AndersenCastaneda)
