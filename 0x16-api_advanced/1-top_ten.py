@@ -13,11 +13,7 @@ def top_ten(subreddit):
     request = requests.get(url, headers=user_agent)
     if request.status_code == 200:
         subscribers = request.json().get('data').get('children')
-        count = 0
-        for hot in subscribers:
-            if count == 10:
-                break
-            count += 1
-            print('{}'.format(hot.get('data').get('title')))
+        print('\n'.join('{}'.format(
+            subscribers[i].get('data').get('title')) for i in range(10)))
     else:
         print('None')
