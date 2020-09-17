@@ -20,4 +20,4 @@ def top_ten(subreddit):
             count += 1
             print(hot.get('data').get('title'))
     else:
-        print(None)
+        print('None')
